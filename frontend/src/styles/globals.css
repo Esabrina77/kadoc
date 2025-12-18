@@ -1,0 +1,183 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* MONOCHROME DARK THEME (Pure) */
+  --background: #000000;
+  --foreground: #ffffff;
+
+  /* Glass Variables - Sharp & Clean - Achromatic */
+  --glass-surface: rgba(255, 255, 255, 0.08);
+  /* White glass on black */
+  --glass-border: rgba(255, 255, 255, 0.15);
+
+  /* Accents are now shades of white/gray - NO COLORS */
+  --primary: #ffffff;
+  --accent: #d4d4d8;
+  /* Zinc 300 */
+
+  /* Grayscale Orbs for Depth */
+  --orb-1: rgba(255, 255, 255, 0.1);
+  --orb-2: rgba(255, 255, 255, 0.05);
+
+  /* Subtle Atmospheric Gradient - PURE GRAYSCALE */
+  /* Using purely gray rgb values (equal r,g,b) */
+  --bg-gradient:
+    radial-gradient(at 0% 0%, rgb(25, 25, 25) 0, transparent 50%),
+    radial-gradient(at 100% 100%, rgb(40, 40, 40) 0, transparent 50%);
+
+  --code-bg: rgba(0, 0, 0, 0.6);
+  --card-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.light {
+  /* MONOCHROME LIGHT THEME (Pure) */
+  --background: #ffffff;
+  --foreground: #000000;
+
+  --glass-surface: rgba(0, 0, 0, 0.03);
+  /* subtle dark glass on white */
+  --glass-border: rgba(0, 0, 0, 0.1);
+
+  --primary: #000000;
+  --accent: #52525b;
+  /* Zinc 600 */
+
+  /* Subtle Gray/Silver Orbs */
+  --orb-1: rgba(0, 0, 0, 0.05);
+  --orb-2: rgba(0, 0, 0, 0.08);
+
+  /* Light Gradient - PURE GRAYSCALE */
+  --bg-gradient:
+    radial-gradient(at 0% 0%, rgb(230, 230, 230) 0, transparent 50%),
+    radial-gradient(at 100% 100%, rgb(210, 210, 210) 0, transparent 50%);
+
+  --code-bg: #18181b;
+  /* Zinc 950 - Keep code block dark */
+  --card-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  transition: background 0.5s ease;
+  position: relative;
+}
+
+/* Floating Orbs - Ultra smooth */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  /* Massive blur for "fog" */
+  z-index: -1;
+  transition: background 0.5s ease;
+}
+
+body::before {
+  width: 80vw;
+  height: 80vw;
+  background: radial-gradient(circle, var(--orb-1) 0%, transparent 60%);
+  top: -25%;
+  left: -25%;
+  animation: moveOrb1 30s infinite alternate ease-in-out;
+}
+
+body::after {
+  width: 70vw;
+  height: 70vw;
+  background: radial-gradient(circle, var(--orb-2) 0%, transparent 60%);
+  bottom: -25%;
+  right: -25%;
+  animation: moveOrb2 35s infinite alternate ease-in-out;
+}
+
+.glass-panel,
+.glass-card {
+  background: var(--glass-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--card-shadow);
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--foreground);
+  /* Highlight border on hover */
+  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+.glass-input {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--foreground);
+}
+
+.dark .glass-input {
+  background: rgba(255, 255, 255, 0.08);
+  /* slight white tint */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.glass-input:focus {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
+}
+
+.dark .glass-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--primary);
+}
+
+@keyframes moveOrb1 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(10%, 15%);
+  }
+}
+
+@keyframes moveOrb2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-10%, -15%);
+  }
+}
+
+/* Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.4);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.7);
+}
