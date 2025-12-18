@@ -1,0 +1,52 @@
+{
+    "Landing": {
+        "versionBubble": "v2.0 Now Available",
+        "title": "Your Personal Code Brain.",
+        "subtitle": "A high-performance knowledge base for your code snippets and documentation. Built for developers who value speed and aesthetics.",
+        "startBtn": "Start Creating",
+        "docsBtn": "Read Docs",
+        "smartSnippetsTitle": "Smart Snippets",
+        "smartSnippetsDesc": "Store your code with syntax highlighting for 10+ languages. Now with complexity ratings and version history.",
+        "searchTitle": "Instant Search",
+        "searchDesc": "Find anything in milliseconds. Our backend-driven search indexes your titles, descriptions, and code content.",
+        "docsTitle": "Documentation",
+        "docsDesc": "Write full articles and architectural guides in Markdown. Keep your knowledge organized alongside your code.",
+        "versioningTitle": "Versioning",
+        "versioningDesc": "Never lose a previous iteration. Kadoc automatically saves history when you update your snippets.",
+        "stackTitle": "Prisma & Go",
+        "stackDesc": "Built on a robust tech stack. Go handles the logic with extreme speed, while Prisma manages your data integrity.",
+        "fastTitle": "Lightning Fast",
+        "fastDesc": "No bloat. Pure performance. Designed to get you to your code or answer as fast as possible."
+    },
+    "Navbar": {
+        "searchPlaceholder": "Search...",
+        "docs": "Docs",
+        "snippets": "Snippets",
+        "newSnippet": "New Snippet"
+    },
+    "SnippetsList": {
+        "loading": "Loading library...",
+        "emptyCanvas": "Empty Canvas",
+        "emptyDesc": "Your knowledge base is waiting. Create your first snippet to get started.",
+        "noMatches": "No matches found",
+        "noMatchesDesc": "We couldn't find any snippets matching \"{query}\".",
+        "noDescription": "No description provided.",
+        "searchPlaceholder": "Search snippets..."
+    },
+    "About": {
+        "title": "About Kadoc",
+        "description": "Kadoc is a snippet manager built for speed."
+    },
+    "DocsList": {
+        "title": "Documentation",
+        "subtitle": "Guides, architectural decisions, and references.",
+        "searchPlaceholder": "Search docs...",
+        "newArticle": "New Article",
+        "new": "New",
+        "loading": "Loading documentation...",
+        "noMatches": "No articles found",
+        "noMatchesDesc": "No matches for \"{query}\"",
+        "emptyDesc": "Start writing your first guide or documentation.",
+        "createBtn": "Create Article"
+    }
+}

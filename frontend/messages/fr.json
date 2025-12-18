@@ -1,0 +1,52 @@
+{
+  "Landing": {
+    "versionBubble": "v2.0 Disponible Maintenant",
+    "title": "Votre Cerveau de Code Personnel.",
+    "subtitle": "Une base de connaissances haute performance pour vos snippets et documentation. Conçu pour les développeurs qui valorisent la vitesse et l'esthétique.",
+    "startBtn": "Commencer",
+    "docsBtn": "Lire la Doc",
+    "smartSnippetsTitle": "Snippets Intelligents",
+    "smartSnippetsDesc": "Stockez votre code avec coloration syntaxique pour 10+ langages. Maintenant avec notes de complexité et historique.",
+    "searchTitle": "Recherche Instantanée",
+    "searchDesc": "Trouvez tout en millisecondes. Notre recherche indexe vos titres, descriptions et contenu de code.",
+    "docsTitle": "Documentation",
+    "docsDesc": "Écrivez des articles complets et guides d'architecture en Markdown. Gardez votre savoir organisé.",
+    "versioningTitle": "Versionnage",
+    "versioningDesc": "Ne perdez jamais une itération. Kadoc sauvegarde automatiquement l'historique quand vous mettez à jour.",
+    "stackTitle": "Prisma & Go",
+    "stackDesc": "Construit sur une stack robuste. Go gère la logique avec une vitesse extrême, Prisma gère l'intégrité des données.",
+    "fastTitle": "Ultra Rapide",
+    "fastDesc": "Pas de superflu. Performance pure. Conçu pour vous amener à votre code ou réponse le plus vite possible."
+  },
+  "Navbar": {
+    "searchPlaceholder": "Rechercher...",
+    "docs": "Docs",
+    "snippets": "Snippets",
+    "newSnippet": "Nouveau Snippet"
+  },
+  "SnippetsList": {
+    "loading": "Chargement de la bibliothèque...",
+    "emptyCanvas": "Toile Vide",
+    "emptyDesc": "Votre base de connaissances vous attend. Créez votre premier snippet pour commencer.",
+    "noMatches": "Aucun résultat trouvé",
+    "noMatchesDesc": "Nous n'avons trouvé aucun snippet correspondant à \"{query}\".",
+    "noDescription": "Aucune description fournie.",
+    "searchPlaceholder": "Rechercher des snippets..."
+  },
+  "About": {
+    "title": "À propos de Kadoc",
+    "description": "Kadoc est un gestionnaire de snippets conçu pour la vitesse."
+  },
+  "DocsList": {
+    "title": "Documentation",
+    "subtitle": "Guides, décisions architecturales et références.",
+    "searchPlaceholder": "Rechercher...",
+    "newArticle": "Nouvel Article",
+    "new": "Nouveau",
+    "loading": "Chargement de la documentation...",
+    "noMatches": "Aucun article trouvé",
+    "noMatchesDesc": "Aucun résultat pour \"{query}\"",
+    "emptyDesc": "Commencez à écrire votre premier guide ou documentation.",
+    "createBtn": "Créer un Article"
+  }
+}
