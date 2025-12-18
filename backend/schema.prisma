@@ -1,0 +1,48 @@
+generator db {
+  provider = "go run github.com/steebchen/prisma-client-go"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Snippet {
+  id          String   @id @default(cuid())
+  title       String
+  language    String
+  code        String
+  description String?
+  complexity  Int      @default(1) // 1-5 scale
+  references  String[] // URLs stored as string array
+  tags        Tag[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  history     SnippetHistory[]
+}
+
+model SnippetHistory {
+  id        String   @id @default(cuid())
+  snippetId String
+  snippet   Snippet  @relation(fields: [snippetId], references: [id], onDelete: Cascade)
+  code      String
+  version   Int      @default(1)
+  createdAt DateTime @default(now())
+}
+
+model Article {
+  id        String   @id @default(cuid())
+  title     String
+  content   String   // Markdown content
+  category  String   @default("General") // Guide, Architecture, etc.
+  tags      Tag[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Tag {
+  id        String    @id @default(cuid())
+  name      String    @unique
+  snippets  Snippet[]
+  articles  Article[]
+}
